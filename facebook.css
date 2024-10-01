@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #4267b2;
+  padding: 10px 20px;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 0;
+}
+
+.header .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1877f2;
+}
+.main-content {
+  display: flex;
+  margin: 0;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.sidebar {
+  width: 28%;
+  padding: 20px;
+  margin-right: 180px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  min-width: 250px;
+}
+
+.stories {
+  width: 100%;
+  display: flex;
+  overflow-x: auto;
+  padding: 20px 0;
+  margin-bottom: 20px;
+}
+
+.stories .story {
+  width: 120px;
+  height: 200px;
+  background-color: #fff;
+  margin-right: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-size: cover;
+  background-position: center;
+}
+
+.feed {
+  width: 50%;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  min-width: 300px;
+}
+
+.feed .post {
+  background-color: #f7f7f7;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+.right-sidebar {
+  width: 20%;
+  padding: 20px;
+  margin: 0 5px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  min-width: 250px;
+}
+
+@media (max-width: 1024px) {
+  .sidebar,
+  .right-sidebar {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .feed {
+    width: 100%;
+  }
+
+  .main-content {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .search-bar {
+    margin: 10px 0;
+    width: 100%;
+  }
+
+  .nav-icons {
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .feed .post {
+    padding: 10px;
+  }
+}
